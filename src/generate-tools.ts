@@ -42,20 +42,11 @@ function generateModularSchema(methods: string[]): any {
       },
       params: {
         type: 'object',
-        description: 'Parameters for the method (varies by method)',
+        description: 'Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: "..."}. For search operations pass {searchPhrase: "...", current: 1, rowCount: 20}.',
         properties: {
-          // Common parameters that many methods use
           uuid: {
             type: 'string',
             description: 'Item UUID (for get/set/del operations)'
-          },
-          data: {
-            type: 'object',
-            description: 'Configuration data (for set operations)'
-          },
-          item: {
-            type: 'object',
-            description: 'Item data (for add/set operations)'
           },
           searchPhrase: {
             type: 'string',

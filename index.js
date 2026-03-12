@@ -120,19 +120,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -307,19 +299,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -398,19 +382,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -577,19 +553,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -684,19 +652,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -753,19 +713,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -820,19 +772,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -889,19 +833,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -966,19 +902,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -1199,19 +1127,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -1322,19 +1242,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -1427,19 +1339,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -1560,19 +1464,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -1773,19 +1669,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -1874,19 +1762,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -1977,19 +1857,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -2086,19 +1958,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -2157,19 +2021,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -2228,19 +2084,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -2309,19 +2157,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -2402,19 +2242,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -2505,19 +2337,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -2642,19 +2466,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -2751,19 +2567,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -2901,19 +2709,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -2971,19 +2771,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -3097,19 +2889,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -3255,19 +3039,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -3331,19 +3107,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -3405,19 +3173,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -3491,19 +3251,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -3559,19 +3311,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -3637,19 +3381,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -3693,19 +3429,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -3749,19 +3477,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -3805,19 +3525,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -3935,19 +3647,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -4017,19 +3721,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -4207,19 +3903,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -4285,19 +3973,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -4353,19 +4033,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -4599,19 +4271,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -4661,19 +4325,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -4731,19 +4387,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -4799,19 +4447,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -4869,19 +4509,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -4955,19 +4587,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -5023,19 +4647,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -5091,19 +4707,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -5159,19 +4767,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -5227,19 +4827,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -5309,19 +4901,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -5561,19 +5145,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -5629,19 +5205,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -5711,19 +5279,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -5781,19 +5341,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -5851,19 +5403,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -5919,19 +5463,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -6105,19 +5641,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -6255,19 +5783,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -6323,19 +5843,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -6391,19 +5903,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -6459,19 +5963,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -6779,19 +6275,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -6917,19 +6405,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -6987,19 +6467,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -7069,19 +6541,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -7137,19 +6601,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -7219,19 +6675,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -7321,19 +6769,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -7385,19 +6825,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -7453,19 +6885,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -7523,19 +6947,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -7601,19 +7017,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -7693,19 +7101,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -7761,19 +7161,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -7851,19 +7243,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -7919,19 +7303,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -8005,19 +7381,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -8149,19 +7517,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -8217,19 +7577,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -8303,19 +7655,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -8381,19 +7725,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -8449,19 +7785,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -8519,19 +7847,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -8607,19 +7927,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -8675,19 +7987,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -8749,19 +8053,11 @@ const TOOLS = [
         },
         "params": {
           "type": "object",
-          "description": "Parameters for the method (varies by method)",
+          "description": "Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: \"...\"}. For search operations pass {searchPhrase: \"...\", current: 1, rowCount: 20}.",
           "properties": {
             "uuid": {
               "type": "string",
               "description": "Item UUID (for get/set/del operations)"
-            },
-            "data": {
-              "type": "object",
-              "description": "Configuration data (for set operations)"
-            },
-            "item": {
-              "type": "object",
-              "description": "Item data (for add/set operations)"
             },
             "searchPhrase": {
               "type": "string",
@@ -11254,6 +10550,25 @@ const METHOD_DOCS = {
   }
 };
 
+// Infer the OPNsense API body key from a method name.
+// OPNsense MVC controllers expect the model name as the top-level request body key:
+//   filterAddRule      → 'rule'
+//   filterSetRule      → 'rule'
+//   aliasAddItem       → 'alias'   (prefix before Add/Set when model is generic 'Item')
+//   keaAddReservation  → 'reservation'
+//   vlanAddItem        → 'vlan'
+//   serverAddServer    → 'server'
+function inferBodyKey(methodName) {
+  const match = methodName.match(/^(.*?)(?:Add|Set)([A-Z][a-zA-Z]*)$/);
+  if (!match) return null;
+  const [, prefix, model] = match;
+  if (model && model.toLowerCase() !== 'item') {
+    return model.charAt(0).toLowerCase() + model.slice(1);
+  }
+  // For addItem/setItem, the key is the prefix (e.g. aliasAddItem → 'alias')
+  return prefix || null;
+}
+
 class OPNsenseMCPServer {
   constructor(config) {
     this.config = config;
@@ -11383,13 +10698,21 @@ class OPNsenseMCPServer {
       throw new Error(`Method ${args.method} not found in module ${tool.module}`);
     }
 
-    // Call the method with params (if provided)
-    console.error(`Calling ${tool.module}.${args.method} with params:`, args.params);
-    
     // Extract params, excluding the method field
     const { method: _, params = {}, ...otherArgs } = args;
-    const callParams = { ...params, ...otherArgs };
-    
+    let callParams = { ...params, ...otherArgs };
+
+    // Fix OPNsense body key: add/set methods expect the model name as the top-level key.
+    // e.g. filterAddRule expects {rule: {...}}, aliasAddItem expects {alias: {...}}.
+    // If callParams has only an 'item' key (the old generic schema placeholder),
+    // re-key it to the correct model name inferred from the method name.
+    if ('item' in callParams && Object.keys(callParams).length === 1) {
+      const inferredKey = inferBodyKey(args.method);
+      callParams = { [inferredKey || 'item']: callParams.item };
+    }
+
+    console.error(`Calling ${tool.module}.${args.method} with params:`, callParams);
+
     // Only pass parameters if there are any
     if (Object.keys(callParams).length > 0) {
       return await method.call(moduleObj, callParams);
