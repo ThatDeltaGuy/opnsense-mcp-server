@@ -21,32 +21,72 @@ interface ModularToolDefinition {
 // Get all methods from a module
 function getModuleMethods(obj: any): string[] {
   if (!obj || typeof obj !== 'object') return [];
-  
+
   const proto = Object.getPrototypeOf(obj);
   if (!proto) return [];
-  
+
   return Object.getOwnPropertyNames(proto).filter(
     key => typeof proto[key] === 'function' && key !== 'constructor'
   );
 }
 
-// Generate schema for modular tools
-function generateModularSchema(methods: string[]): any {
+// camelCase words that indicate a state-mutating (write) operation.
+// Classification: split method name on uppercase letters, check if any word is in this set.
+const WRITE_WORDS = new Set([
+  'add', 'set', 'del', 'delete', 'toggle',
+  'apply', 'reconfigure', 'reload', 'refresh',
+  'restart', 'start', 'stop', 'kill', 'halt', 'reboot', 'poweroff',
+  'reset', 'revert', 'rollback', 'savepoint', 'cancel',
+  'activate', 'enable', 'disable',
+  'save', 'store', 'restore', 'dismiss',
+  'update', 'upload', 'import', 'install', 'reinstall', 'uninstall', 'remove',
+  'generate', 'gen', 'sign', 'revoke', 'renew', 'issue',
+  'move', 'flush', 'clear', 'create', 'init',
+]);
+
+// Some plugins use all-lowercase nouns after the action verb, so the camelCase
+// split doesn't isolate the verb (e.g. 'bansDelban' → ['bans','delban']).
+// These short verb prefixes trigger a startsWith check as a fallback.
+const WRITE_VERB_PREFIXES = ['add', 'del', 'set', 'toggle', 'create', 'delete', 'remove', 'reset', 'sign'];
+
+// Words that start with a write verb prefix but are NOT write actions themselves.
+const NOT_WRITE_DESPITE_PREFIX = new Set(['settings', 'address', 'general', 'generate', 'generated']);
+
+// Classify a method as read (non-mutating) or write (state-mutating).
+function classifyMethod(methodName: string): 'read' | 'write' {
+  const words = methodName.split(/(?=[A-Z])/).map(w => w.toLowerCase());
+  for (const word of words) {
+    if (WRITE_WORDS.has(word)) return 'write';
+    // Prefix fallback for compound lowercase words (e.g. 'delban', 'addcachepath')
+    if (!NOT_WRITE_DESPITE_PREFIX.has(word)) {
+      for (const prefix of WRITE_VERB_PREFIXES) {
+        if (word.length > prefix.length && word.startsWith(prefix)) return 'write';
+      }
+    }
+  }
+  return 'read';
+}
+
+function capitalize(s: string): string {
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+function generateReadSchema(methods: string[]): any {
   return {
     type: 'object',
     properties: {
       method: {
         type: 'string',
-        description: 'The method to call on this module',
+        description: 'The read method to call (non-mutating)',
         enum: methods
       },
       params: {
         type: 'object',
-        description: 'Parameters for the method. For add/set operations pass the model-keyed body that OPNsense expects (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For get/del operations pass {uuid: "..."}. For search operations pass {searchPhrase: "...", current: 1, rowCount: 20}.',
+        description: 'Method parameters. For search: {searchPhrase: "...", current: 1, rowCount: 20}. For get: {uuid: "..."}. Many read methods take no params.',
         properties: {
           uuid: {
             type: 'string',
-            description: 'Item UUID (for get/set/del operations)'
+            description: 'Item UUID (for get operations)'
           },
           searchPhrase: {
             type: 'string',
@@ -54,12 +94,12 @@ function generateModularSchema(methods: string[]): any {
           },
           current: {
             type: 'integer',
-            description: 'Current page (for search operations)',
+            description: 'Page number (for search operations)',
             default: 1
           },
           rowCount: {
             type: 'integer',
-            description: 'Rows per page (for search operations)',
+            description: 'Results per page (for search operations)',
             default: 20
           }
         }
@@ -69,58 +109,95 @@ function generateModularSchema(methods: string[]): any {
   };
 }
 
-// Analyze all modules and create modular tools
+function generateWriteSchema(methods: string[]): any {
+  return {
+    type: 'object',
+    properties: {
+      method: {
+        type: 'string',
+        description: 'The write method to call (modifies state)',
+        enum: methods
+      },
+      params: {
+        type: 'object',
+        description: 'Method parameters. For add/set pass the OPNsense model-keyed body (e.g. {rule: {...}} for filterAddRule, {alias: {...}} for aliasAddItem, {reservation: {...}} for keaAddReservation). For del/toggle pass {uuid: "..."}. For apply/reconfigure/service methods params is usually empty.',
+        properties: {
+          uuid: {
+            type: 'string',
+            description: 'Item UUID (for set/del/toggle operations)'
+          }
+        }
+      }
+    },
+    required: ['method']
+  };
+}
+
+// Split a module's methods into read/write tools. Returns 1-2 tools.
+function createModuleTools(
+  baseName: string,
+  module: string,
+  methods: string[],
+  submodule?: string
+): ModularToolDefinition[] {
+  const readMethods = methods.filter(m => classifyMethod(m) === 'read');
+  const writeMethods = methods.filter(m => classifyMethod(m) === 'write');
+  const label = capitalize(submodule || module);
+  const tools: ModularToolDefinition[] = [];
+
+  if (readMethods.length > 0) {
+    tools.push({
+      name: `${baseName}_read`,
+      description: `${label} read operations — ${readMethods.length} methods: ${readMethods.slice(0, 6).join(', ')}${readMethods.length > 6 ? '...' : ''}`,
+      module,
+      ...(submodule ? { submodule } : {}),
+      methods: readMethods,
+      inputSchema: generateReadSchema(readMethods)
+    });
+  }
+
+  if (writeMethods.length > 0) {
+    tools.push({
+      name: `${baseName}_write`,
+      description: `${label} write operations — ${writeMethods.length} methods: ${writeMethods.slice(0, 6).join(', ')}${writeMethods.length > 6 ? '...' : ''}`,
+      module,
+      ...(submodule ? { submodule } : {}),
+      methods: writeMethods,
+      inputSchema: generateWriteSchema(writeMethods)
+    });
+  }
+
+  return tools;
+}
+
+// Analyze all modules and create tools
 const modularTools: ModularToolDefinition[] = [];
 
 // Core module
 const coreMethods = getModuleMethods(client.core);
 if (coreMethods.length > 0) {
-  modularTools.push({
-    name: 'core_manage',
-    description: `Core system management - ${coreMethods.length} available methods including: ${coreMethods.slice(0, 5).join(', ')}...`,
-    module: 'core',
-    methods: coreMethods,
-    inputSchema: generateModularSchema(coreMethods)
-  });
+  modularTools.push(...createModuleTools('core', 'core', coreMethods));
 }
 
 // Firewall module
 const firewallMethods = getModuleMethods(client.firewall);
 if (firewallMethods.length > 0) {
-  modularTools.push({
-    name: 'firewall_manage',
-    description: `Firewall management - ${firewallMethods.length} available methods including: ${firewallMethods.slice(0, 5).join(', ')}...`,
-    module: 'firewall',
-    methods: firewallMethods,
-    inputSchema: generateModularSchema(firewallMethods)
-  });
+  modularTools.push(...createModuleTools('firewall', 'firewall', firewallMethods));
 }
 
 // Auth module
 const authMethods = getModuleMethods(client.auth);
 if (authMethods.length > 0) {
-  modularTools.push({
-    name: 'auth_manage',
-    description: `Authentication management - ${authMethods.length} available methods including: ${authMethods.slice(0, 5).join(', ')}...`,
-    module: 'auth',
-    methods: authMethods,
-    inputSchema: generateModularSchema(authMethods)
-  });
+  modularTools.push(...createModuleTools('auth', 'auth', authMethods));
 }
 
 // Interfaces module
 const interfacesMethods = getModuleMethods(client.interfaces);
 if (interfacesMethods.length > 0) {
-  modularTools.push({
-    name: 'interfaces_manage',
-    description: `Network interfaces management - ${interfacesMethods.length} available methods including: ${interfacesMethods.slice(0, 5).join(', ')}...`,
-    module: 'interfaces',
-    methods: interfacesMethods,
-    inputSchema: generateModularSchema(interfacesMethods)
-  });
+  modularTools.push(...createModuleTools('interfaces', 'interfaces', interfacesMethods));
 }
 
-// Direct modules (not under core)
+// Direct modules
 const directModules = [
   'captiveportal', 'cron', 'dhcpv4', 'dhcpv6', 'dhcrelay',
   'diagnostics', 'dnsmasq', 'firmware', 'ids', 'ipsec', 'kea',
@@ -129,58 +206,48 @@ const directModules = [
 ];
 
 directModules.forEach(moduleName => {
-  const module = (client as any)[moduleName];
-  if (module) {
-    const methods = getModuleMethods(module);
+  const mod = (client as any)[moduleName];
+  if (mod) {
+    const methods = getModuleMethods(mod);
     if (methods.length > 0) {
-      modularTools.push({
-        name: `${moduleName}_manage`,
-        description: `${moduleName.charAt(0).toUpperCase() + moduleName.slice(1)} management - ${methods.length} available methods including: ${methods.slice(0, 5).join(', ')}...`,
-        module: moduleName,
-        methods: methods,
-        inputSchema: generateModularSchema(methods)
-      });
+      modularTools.push(...createModuleTools(moduleName, moduleName, methods));
     }
   }
 });
 
-// Plugin modules - group all plugins into one tool
+// Plugin modules
 const plugins = client.plugins as any;
 const pluginNames = Object.keys(plugins).filter(key => key !== 'http');
-const allPluginMethods: { plugin: string; methods: string[] }[] = [];
 
 pluginNames.forEach(pluginName => {
   const plugin = plugins[pluginName];
   if (plugin) {
     const methods = getModuleMethods(plugin);
     if (methods.length > 0) {
-      allPluginMethods.push({ plugin: pluginName, methods });
+      modularTools.push(...createModuleTools(`plugin_${pluginName}`, 'plugins', methods, pluginName));
     }
   }
 });
 
-// Create individual plugin tools
-allPluginMethods.forEach(({ plugin, methods }) => {
-  modularTools.push({
-    name: `plugin_${plugin}_manage`,
-    description: `Plugin ${plugin} management - ${methods.length} available methods including: ${methods.slice(0, 5).join(', ')}...`,
-    module: 'plugins',
-    submodule: plugin,
-    methods: methods,
-    inputSchema: generateModularSchema(methods)
-  });
-});
+const coreToolCount = modularTools.filter(t => t.module !== 'plugins').length;
+const pluginToolCount = modularTools.filter(t => t.module === 'plugins').length;
 
-console.log(`\nTotal modular tools generated: ${modularTools.length}`);
-console.log(`Core tools: ${modularTools.filter(t => t.module !== 'plugins').length}`);
-console.log(`Plugin tools: ${modularTools.filter(t => t.module === 'plugins').length}`);
+console.log(`\nTotal tools generated: ${modularTools.length}`);
+console.log(`Core tools: ${coreToolCount}`);
+console.log(`Plugin tools: ${pluginToolCount}`);
 
-// Generate method documentation
+// Count read vs write
+const readCount = modularTools.filter(t => t.name.endsWith('_read')).length;
+const writeCount = modularTools.filter(t => t.name.endsWith('_write')).length;
+console.log(`Read tools: ${readCount}, Write tools: ${writeCount}`);
+
+// Method documentation keyed by tool name
 const methodDocs: any = {};
 modularTools.forEach(tool => {
-  const key = tool.submodule ? `${tool.module}.${tool.submodule}` : tool.module;
-  methodDocs[key] = {
+  methodDocs[tool.name] = {
     toolName: tool.name,
+    module: tool.module,
+    ...(tool.submodule ? { submodule: tool.submodule } : {}),
     methods: tool.methods
   };
 });
@@ -188,8 +255,8 @@ modularTools.forEach(tool => {
 // Save tool definitions
 fs.writeFileSync('tools-generated.json', JSON.stringify({
   totalTools: modularTools.length,
-  coreTools: modularTools.filter(t => t.module !== 'plugins').length,
-  pluginTools: modularTools.filter(t => t.module === 'plugins').length,
+  coreTools: coreToolCount,
+  pluginTools: pluginToolCount,
   tools: modularTools,
   methodDocs: methodDocs
 }, null, 2));
