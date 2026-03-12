@@ -14062,7 +14062,10 @@ class OPNsenseMCPServer {
     }).map(tool => ({
       name: tool.name,
       description: tool.description,
-      inputSchema: tool.inputSchema
+      inputSchema: tool.inputSchema,
+      annotations: tool.name.endsWith('_read')
+        ? { readOnlyHint: true }
+        : { destructiveHint: true }
     }));
   }
 
