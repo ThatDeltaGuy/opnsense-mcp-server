@@ -287,6 +287,42 @@ return {
 };
 ```
 
+## Compatibility & Known Issues
+
+### OPNsense Version Requirements
+
+This server requires **OPNsense 25.7 or later**.
+
+The upstream TypeScript client uses snake_case API URLs throughout (e.g., `/api/firewall/filter/add_rule`). OPNsense switched to snake_case URL routing in v25.7. On older versions all API calls will return 404.
+
+### Known Upstream Client Bugs (Fixed by This Server)
+
+The `@richard-stovall/opnsense-typescript-client` package has a camelCase→snake_case conversion bug that treats each capital letter in an acronym as a separate word boundary, producing broken URLs. This server patches them automatically via an axios request interceptor at startup.
+
+Affected methods and their URL corrections:
+
+| Method | Broken URL (sent by client) | Fixed URL |
+|--------|-----------------------------|-----------|
+| `aliasGetAliasUUID` | `.../get_alias_u_u_i_d/` | `.../get_alias_uuid/` |
+| `aliasGetGeoIP` | `.../get_geo_i_p` | `.../get_geo_ip` |
+| `diagnosticsCpuUsageGetCpuType` | `.../get_c_p_u_type` | `.../get_cpu_type` |
+| `diagnosticsSystemhealthExportAsCsv` | `.../export_as_c_s_v/` | `.../export_as_csv/` |
+| `diagnosticsSystemhealthGetRrdlist` | `.../get_r_r_dlist` | `.../get_rrdlist` |
+| `acmeclientSettingsFetchHaproxyIntegration` | `.../fetch_h_a_proxy_integration` | `.../fetch_haproxy_integration` |
+| `proxySettings*PacMatch/Proxy/Rule` | `.../add_p_a_c_match` etc. | `.../add_pac_match` etc. |
+| `proxySettingsFetchRbcron` | `.../fetch_r_b_cron` | `.../fetch_rbcron` |
+
+These fixes are applied transparently — you do not need to do anything to benefit from them.
+
+### Endpoints Not Represented in the Client
+
+A few OPNsense API endpoints are not exposed by the upstream client and cannot be called through this MCP server:
+
+- `POST /api/firewall/filter/apply` — simple apply (the client only exposes `filter_base/apply` for the savepoint workflow)
+- `GET /api/firewall/filter/searchRule` — list firewall rules by search
+
+Report additional missing endpoints to the [upstream client repository](https://github.com/richard-stovall/opnsense-typescript-client).
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.

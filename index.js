@@ -13976,6 +13976,24 @@ class OPNsenseMCPServer {
         apiSecret: this.config.apiSecret,
         verifySsl: this.config.verifySsl ?? true,
       });
+
+      // Fix broken acronym URLs caused by camelCase→snake_case conversion bugs
+      // in @richard-stovall/opnsense-typescript-client (each capital letter in an
+      // acronym is incorrectly treated as a separate word boundary).
+      this.client.http.client.interceptors.request.use(config => {
+        if (config.url) {
+          config.url = config.url
+            .replace(/_u_u_i_d/g,    '_uuid')
+            .replace(/_geo_i_p/g,    '_geo_ip')
+            .replace(/_c_p_u_/g,     '_cpu_')
+            .replace(/_c_s_v/g,      '_csv')
+            .replace(/_r_r_d/g,      '_rrd')
+            .replace(/_p_a_c_/g,     '_pac_')
+            .replace(/_h_a_proxy/g,  '_haproxy')
+            .replace(/_r_b_cron/g,   '_rbcron');
+        }
+        return config;
+      });
     }
     return this.client;
   }
